@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="js/main-view/main-view.css">
+<div class="outer_wrapper">
+    <div class="inner_wrapper">
+        <h1>The Best Weather on Earth</h1>
+        <div class="city_list_wrapper">
+            <div ng-repeat="city in $ctrl.allCities" class="city_wrapper">
+                <div class="city_name">{{city.name}}</div>
+                <div class="city_temp">{{city.main.temp}}</div>
+                <div class="city_humidity">{{city.main.humidity}}</div>
+            </div>
+        </div>
+    </div>
+</div>

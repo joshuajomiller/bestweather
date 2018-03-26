@@ -1,0 +1,40 @@
+.outer_wrapper{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner_wrapper{
+    height: 70%;
+    border: 4px solid #e8e8e8;
+    padding: 20px 40px;
+    color: #ffffff;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: column;
+}
+.inner_wrapper h1{
+    text-align: center;
+    flex: 0 1 auto;
+}
+.city_list_wrapper {
+    font-family: 'Quicksand', sans-serif;
+    margin: 10px 20px;
+    overflow-y: auto;
+    flex: 1 1 auto;
+}
+.city_wrapper{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.city_wrapper div{
+    flex-basis: 33.33%;
+}
+.city_wrapper .city_temp{
+    text-align: center;
+}
+.city_wrapper .city_humidity{
+    text-align: right;
+}
