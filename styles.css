@@ -7,3 +7,10 @@ html, body {
 body{
     font-family: 'Cabin', serif;
 }
+
+
+@media (max-width: 767px) {
+    html, body {
+        font-size: 10px;
+    }
+}

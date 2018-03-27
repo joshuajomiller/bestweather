@@ -9,7 +9,7 @@ angular.module('weatherApp').service('mainViewService', ['$http', '$q', function
 
   self.getBoundedWeather = function () {
     return $q(function (resolve, reject) {
-      $http.get(`http://api.openweathermap.org/data/2.5/box/city?bbox=${self.boundsObj.lonLeft},${self.boundsObj.latBottom},${self.boundsObj.lonRight},${self.boundsObj.latTop},10&appid=71cfee950390924b1a994bbdf490ddfc`)
+      $http.get(`http://api.openweathermap.org/data/2.5/box/city?bbox=${self.boundsObj.lonLeft},${self.boundsObj.latBottom},${self.boundsObj.lonRight},${self.boundsObj.latTop},6&appid=71cfee950390924b1a994bbdf490ddfc`)
         .then(function (data) {
           // console.log(data);
           resolve(data.data.list);
