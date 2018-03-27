@@ -5,8 +5,5 @@ html, body {
 }
 
 body{
-    background: url('img/bg.jpg');
-    background-size: cover;
-    font-family: 'Lora', serif;
-
+    font-family: 'Cabin', serif;
 }

@@ -5,17 +5,21 @@
     <title>Best weather on earth</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lora|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Quicksand|Cabin" rel="stylesheet">
+    <link href="css/open-weather-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body ng-app="weatherApp">
 
+    <video-cover-component></video-cover-component>
     <main-view-component></main-view-component>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="js/lib/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main-view/main-view.service.js"></script>
+    <script src="js/video-cover/video-cover.component.js"></script>
     <script src="js/main-view/main-view.component.js"></script>
 </body>
 </html>
