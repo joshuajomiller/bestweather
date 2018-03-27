@@ -1,12 +1,30 @@
 <link rel="stylesheet" href="js/main-view/main-view.css">
+
 <div class="outer_wrapper">
-    <div class="inner_wrapper">
-        <h1>The Best Weather on Earth</h1>
+    <div class="loading_wrapper" ng-if="!$ctrl.loaded">
+        <img src="img/loading.svg">
+        <h2>Searching around the world for the best weather</h2>
+    </div>
+    <div class="inner_wrapper" ng-if="$ctrl.loaded">
+        <div class="best_weather_wrapper">
+            <div class="best_weather_title">The city with the best weather on earth for
+                <select class="gender_selector" ng-model="$ctrl.selectedGender" ng-change="$ctrl.genderChange()">
+                    <option value="male">Guys</option>
+                    <option value="female">Girls</option>
+                </select>
+                is:</div>
+            <div class="best_weather_city">{{$ctrl.topCities[0].name}}</div>
+            <div class="best_weather_temp"><i class="owi owi-{{$ctrl.topCities[0].weather[0].icon}}"></i> {{$ctrl.topCities[0].main.temp}} °C | {{$ctrl.topCities[0].main.humidity}} %</div>
+        </div>
+        <div class="other_cities_title">-</div>
+        <div class="city_wrapper_header">
+            <div class="city_name_header">Other leading cities</div>
+            <div class="city_temp_header">Temperature | Humidity</div>
+        </div>
         <div class="city_list_wrapper">
-            <div ng-repeat="city in $ctrl.allCities" class="city_wrapper">
+            <div ng-repeat="city in $ctrl.topCities" class="city_wrapper" ng-show="$index !== 0">
                 <div class="city_name">{{city.name}}</div>
-                <div class="city_temp">{{city.main.temp}}</div>
-                <div class="city_humidity">{{city.main.humidity}}</div>
+                <div class="city_temp"><i class="owi owi-{{city.weather[0].icon}}"></i> {{city.main.temp}} °C | {{city.main.humidity}} %</div>
             </div>
         </div>
     </div>
